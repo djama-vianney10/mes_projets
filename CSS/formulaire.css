@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --bg: #0a1428;
+    --pink: #fcbe67;
+    --lg: #16eac9;
+    --fc: #8f9699;
+    --white: #fff;
+    --red: #e21d1d;
+    --purple:#9c278d; 
+}
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--bg);
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2) ;
+    padding-block: 48px;
+    padding-inline: 40px;
+    height: 480px;
+    width: 400px;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.form-container h1{
+    text-align: center;
+    color: var(--white);
+    font-size: 2rem;
+    margin-block-end: 3rem;
+}
+
+
+form .form-group{
+    position: relative;
+    margin-block-end: 2rem;
+}
+
+.form-group input{
+    width: 100%;
+    padding-block: 8px 0;
+    padding-inline: 8px 36px;
+    height: 48px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--white);
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 500;
+    transition: 0.25s ease-in-out;
+}
+
+
+.form-group input:focus, .form-group input:valid{
+    border-color: var(--pink);
+}
+
+.form-group label{
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    color: var(--white);
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label {
+    top: 0;
+    color: var(--pink);
+}
+
+.form-group span{
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    color: var(--white);
+    transition: 0.25s ease-in-out;
+}
+
+.form-group input:focus ~ span,
+.form-group input:valid ~ span{
+    color: var(--pink);
+}
+
+.form-container .form-options{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-block-end: 1rem;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.form-options a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.form-options a:hover{
+    text-decoration: underline;
+}
+
+.form-options input{
+    margin-inline-end: 4px;
+    accent-color: var(--pink);
+}
+
+button{
+    width: 100%;
+    height: 48px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-block: 10px 20px;
+    background-color: var(--pink);
+    color: var(--white);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+button:hover{
+    background-color: var(--bg);
+    color: var(--pink);
+}
+
+.register{
+    text-align: center;
+}
+
+.register p{
+    color: var(--white);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.register a{
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+}
+
+.register a:hover{
+    color: var(--pink);
+    text-decoration: underline;
+}
+
+
+.blob{
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    background: linear-gradient(360deg, var(--red) 10%, var(--purple) 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    transform: translate(250px, 80px) rotate(60deg);
+    animation: blob 16s infinite alternate;
+    transition: 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+
+.blob:hover{
+    filter: blur(30px);
+    width: 560px;
+    height: 560px;
+    box-shadow: inset 100px 100px var(--white), inset 200px 200px var(--pink), inset 300px 300px var(--red);
+}
+
+@keyframes blob {
+        5% {
+            transform: translate(250px, 80px) rotate(60deg);
+        }
+        40% {
+            transform: translate(-60%, -50%) rotate(30deg);
+            border-radius: 63% 37% 67% 33% / 31% 49% 51% 69% ;
+        }
+        75% {
+            transform: translate(0%, -100%) rotate(-120deg);
+            border-radius: 42% 58% 45% 55% / 38% 55% 45% 62% ;
+        }
+}
+

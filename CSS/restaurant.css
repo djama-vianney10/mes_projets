@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Redressed&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.redressed{
+    font-family: 'redressed', cursive;
+}
+
+.merriweather{
+    font-family: 'merriweather', sans-serif;
+}
+
+.dd-navbar{
+    background-color: rgba(0, 0, 0, 0.55);
+    font-family: 'Merriweather', serif;
+    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.54);
+    z-index: 99;
+}
+
+.dd-navbar .nav-link{
+    border: 1px solid transparent;
+    transition: padding-bottom .4s ease-in-out, border-color .3s ease;
+}
+
+.dd-navbar .nav-link:hover{
+    padding-bottom: 20px;
+    border-bottom-color: var(--bs-teal);
+}
+
+.banner, .order-form{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../IMAGES/restaurant.jpg') center center fixed no-repeat;
+    height: 800px;
+    background-size: cover;
+}
+
+.order-form{
+    height: 500px;
+}
+
+.banner .banner-desc{
+    font-size: 48px;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+.dd-menu{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../IMAGES/lac.jpg') center center fixed no-repeat ;
+    height: 1300px;
+    background-size: cover;
+}
+
+
+.btn-order{
+    color: var(--bs-teal);
+    border-color: var(--bs-teal);
+    transition: 0.5s;
+}
+
+.btn-order:hover,
+.btn-order:active,
+.btn-order:focus {
+    color: #fff;
+    background-color:var(--bs-teal) ;
+    outline: none;
+}
